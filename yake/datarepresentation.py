@@ -152,7 +152,7 @@ class DataCore(object):
         for pontuation in self.exclude:
             simples_unique_term = simples_unique_term.replace(pontuation, '')
         # until here
-        isstopword = simples_sto or unique_term in self.stopword_set or len(simples_unique_term) < 3
+        isstopword = simples_sto or unique_term in self.stopword_set or len(simples_unique_term) < 2
         
         term_id = len(self.terms)
         term_obj = single_word(unique_term, term_id, self.G)
